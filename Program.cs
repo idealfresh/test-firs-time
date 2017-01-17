@@ -4,39 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace proba_chetna_ne_chetna
+namespace _6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // this is test 1 to local
-            var n = int.Parse(Console.ReadLine());
-            var sumEven = 0;
-            var sumOdd = 0;
 
-            for (int i = 0; i < n; i++)
-            {
-                var number = int.Parse(Console.ReadLine());
+            var letter1 = char.Parse(Console.ReadLine());
+            var letter2 = char.Parse(Console.ReadLine());
+            var letter3 = char.Parse(Console.ReadLine());
+            var count = 0;
+           
 
-                if (i%2==0)
-                {
-                    sumEven += number;
-                }
-                else 
-                {
-                    sumOdd += number;
-                }
-            }
-            if (sumEven==sumOdd)
+            for (var i = letter1; i <= letter2; i++)
             {
-                Console.WriteLine("Yes Sum = {0}", sumEven);
+                for (var j = letter1; j <= letter2; j++)
+                {
+                    for (var k = letter1; k <= letter2; k++)
+                    {
+                        if (i!=letter3 && j!=letter3 && k!=letter3)
+                        {
+                            Console.Write("{0}{1}{2} ", i, j, k);
+                            count++;
+                            
+                        }
+                        
+                    }
+                }
             }
-            else
-            {
-                Console.WriteLine("No Diff = {0}", Math.Abs(sumEven-sumOdd));
-            }
-        
+            Console.WriteLine(count);
         }
     }
 }
