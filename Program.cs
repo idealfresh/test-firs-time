@@ -10,6 +10,7 @@ namespace proba_chetna_ne_chetna
     {
         static void Main(string[] args)
         {
+            // this is test 1 to local
             var n = int.Parse(Console.ReadLine());
             var sumEven = 0;
             var sumOdd = 0;
